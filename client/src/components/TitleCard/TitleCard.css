@@ -1,0 +1,14 @@
+.titleCard {
+  display: flex;
+  align-items: center;
+  box-shadow: 1px 0 5px 1px white;
+  height: 60px;
+  max-width: 25%;
+  margin: 1rem;
+}
+
+.titleCard img {
+  height: 60px;
+  width: auto;
+  margin-right: 2rem;
+}
