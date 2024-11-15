@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Footer.css";
-import LanguageChoice from "./LanguageChoice";
+import LanguageChoice from "../LanguageChoice/LanguageChoice";
 
 function Footer() {
   return (

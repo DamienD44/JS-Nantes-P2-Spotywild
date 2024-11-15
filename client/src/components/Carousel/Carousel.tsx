@@ -1,53 +1,72 @@
-import "./Carousel.css";
-import data from "../../assets/music-data.json";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-import Slider from 'react-slick';
-interface Character{
-    titreImg: string
-    genre:string
-    
-
-
-}
-interface propChar{
-    character: Character;
-
-}
-
-
-function Carousel  ({character}: propChar) {
-  // Configuration du ccarousel
+function Carousel() {
   const settings = {
-    dots: true,
+    className: "center",
+    centerMode: true,
     infinite: true,
+    centerPadding: "60px",
+    slidesToShow: 3,
     speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+    rows: 2,
+    slidesPerRow: 2,
   };
-
   return (
-    <Slider {...settings}>
-      {data.map((item, index) => (
-        <div key={index} style={{ textAlign: 'center' }}>
-          <img src={item.titreImgRock} alt={`Slide ${index + 1}`} style={{ width: '100%', maxHeight: '500px' }} />
+    <div className="slider-container">
+      <Slider {...settings}>
+        <div>
+          <h3>1</h3>
         </div>
-      ))}
-    </Slider>
+        <div>
+          <h3>2</h3>
+        </div>
+        <div>
+          <h3>3</h3>
+        </div>
+        <div>
+          <h3>4</h3>
+        </div>
+        <div>
+          <h3>5</h3>
+        </div>
+        <div>
+          <h3>6</h3>
+        </div>
+        <div>
+          <h3>7</h3>
+        </div>
+        <div>
+          <h3>8</h3>
+        </div>
+        <div>
+          <h3>9</h3>
+        </div>
+        <div>
+          <h3>10</h3>
+        </div>
+        <div>
+          <h3>11</h3>
+        </div>
+        <div>
+          <h3>12</h3>
+        </div>
+        <div>
+          <h3>13</h3>
+        </div>
+        <div>
+          <h3>14</h3>
+        </div>
+        <div>
+          <h3>15</h3>
+        </div>
+        <div>
+          <h3>16</h3>
+        </div>
+      </Slider>
+    </div>
   );
-};
+}
 
 export default Carousel;
-    
-
-
-
-
-
-
-
-
-
-
-     
-
-export default Carousel
