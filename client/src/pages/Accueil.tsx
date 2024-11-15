@@ -1,5 +1,6 @@
+import Menumob from "../components/menu-mobil/Menumob";
 function Accueil() {
-  return <h1>Page Accueil</h1>;
+  return <Menumob />;
 }
 
 export default Accueil;

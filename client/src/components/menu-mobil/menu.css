@@ -1,0 +1,130 @@
+header ul {
+  gap: 16px;
+}
+.flex {
+  display: none;
+}
+header.flex {
+  justify-content: space-between;
+  padding: 0 2rem;
+  margin-top: 1.2rem;
+}
+
+header button {
+  all: unset;
+}
+
+header button.menu img {
+  width: 30px;
+  height: 30px;
+  color: aliceblue;
+  background: rgb(86, 85, 85);
+  box-shadow: 0px 0px 5px rgb(222, 188, 188);
+  border-radius: 10px;
+}
+
+ul li a {
+  color: var(--titll);
+  opacity: 0.9;
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+ul li a:hover {
+  color: var(--bleu);
+  opacity: 1;
+  font-size: 0.9rem;
+}
+.model {
+  width: 85%;
+  background: var(--secondray);
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+}
+
+nav {
+  background-color: var(--bgheader);
+  padding: 0.77rem 1.6rem;
+  border-radius: 55px;
+  box-shadow: 1px 1px 40px rgba(86, 86, 86, 0.397);
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(40, 40, 46, 0.9);
+}
+.fixed ul button {
+  all: initial;
+  margin-left: 30rem;
+  color: red;
+  font-size: 1.3rem;
+  font-weight: 2rem;
+  outline: none;
+  border: none;
+  background: none;
+}
+.fixed ul li {
+  border-bottom: slategrey solid 1px;
+}
+.model li {
+  border-bottom: 1px solid var(--bgheader);
+  padding-bottom: 0.77rem;
+  padding-top: 0.5rem;
+}
+.model li a {
+  font-size: 1rem;
+}
+
+.model li a:hover {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.logo-imag {
+  width: 30px;
+  height: 30px;
+}
+
+.model li:last-child {
+  border: none;
+}
+
+/* pop up , mudel*/
+
+@media (max-width: 700px) {
+  header nav {
+    display: none;
+  }
+  header button.menu img {
+    width: 30px;
+    display: block;
+    height: 30px;
+    color: aliceblue;
+    background: rgb(86, 85, 85);
+    box-shadow: 0px 0px 5px rgb(222, 188, 188);
+    border-radius: 10px;
+  }
+
+  header button.menu {
+    display: block;
+  }
+  .flex {
+    display: block;
+    position: absolute;
+    top: 2%;
+    right: 100px;
+
+    width: 30px;
+    align-items: center;
+  }
+  .logo-imag {
+    width: 30px;
+  }
+}
