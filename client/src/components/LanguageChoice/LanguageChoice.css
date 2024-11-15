@@ -4,15 +4,13 @@
 
 .language-selector {
   display: flex;
-  margin-left: 8px;
 }
 .langue {
   display: flex;
-  padding: 7%;
-
+  padding: 10px;
   box-shadow: 0 0 5px 1px white;
-  min-width: 15vw;
-  max-height: 8vh;
+  max-width: 150px;
+  height: auto;
   align-items: center;
 }
 .logo {
@@ -22,7 +20,7 @@
   border: none;
   background: none;
   color: white;
-  width: 10vw;
+  width: 100%;
 }
 option {
   width: 200%;
@@ -32,7 +30,6 @@ option {
   background-color: black;
 }
 .langue img {
-  margin: 0 0.5rem 0 0.5rem;
-  width: 25px;
+  width: 20%;
   height: auto;
 }

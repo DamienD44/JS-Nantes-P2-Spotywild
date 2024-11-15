@@ -16,10 +16,10 @@ function App() {
     <>
       <Header />
       <main className="the-main">
+        <Outlet />
         <section className="column-2">
-          <Outlet />
+          <Menu isHidden={isHidden} menuState={menuState} />
         </section>
-        <Menu isHidden={isHidden} menuState={menuState} />
       </main>
       <Footer />
     </>
