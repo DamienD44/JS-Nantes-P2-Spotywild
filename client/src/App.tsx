@@ -4,7 +4,6 @@ import { useState } from "react";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Menu from "./components/menuComponent/Menu";
-import Carousel from "./components/Carousel/Carousel";
 
 function App() {
   const [isHidden, setIsHidden] = useState(false);
@@ -19,7 +18,6 @@ function App() {
       <main className="the-main">
         <section className="column-2">
           <Outlet />
-          <Carousel />
         </section>
         <Menu isHidden={isHidden} menuState={menuState} />
       </main>
