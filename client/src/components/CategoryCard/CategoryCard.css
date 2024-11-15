@@ -1,0 +1,41 @@
+:root {
+  --img-genre-width: 150px;
+}
+.category-card {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr;
+  min-width: 280px;
+  aspect-ratio: 16 / 9;
+  padding: 1.5rem;
+  border-radius: 10px;
+  background-color: #006450;
+  overflow: hidden;
+}
+.category-card figcaption {
+  grid-column: 1 / 2;
+  font-size: 2rem;
+}
+.category-card img {
+  position: relative;
+  grid-column: 2 / 3;
+  width: var(--img-genre-width);
+  height: var(--img-genre-width);
+  left: 30%;
+  top: 20%;
+  transform: rotate(20deg);
+}
+.section-category-card {
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 768px) {
+  .category-card {
+    display: flex;
+    flex-direction: column;
+    min-width: auto;
+  }
+  .category-card img {
+    display: none;
+  }
+}
