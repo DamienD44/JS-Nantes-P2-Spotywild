@@ -1,4 +1,5 @@
 import "./ButtonMenu.css";
+import { useState } from "react";
 
 interface buttonState {
   isHidden: boolean;
@@ -6,17 +7,36 @@ interface buttonState {
 }
 
 function ButtonMenu({ isHidden, menuState }: buttonState) {
+  const [showImage, setShowImage] = useState(false);
+
+  const handleMenuStateChange = () => {
+    menuState();
+    setShowImage(false);
+    setTimeout(() => {
+      setShowImage(true);
+    }, 1500);
+  };
+
   return (
     <>
-      <button type="button" className="hiddenMenu" onClick={menuState}>
-        <img
-          src={
-            isHidden
-              ? "images/Logo-footer-menu/Logo_voir_menu-compacter.png"
-              : "images/Logo-footer-menu/Logo_cacher_menu-compacter.png"
-          }
-          alt={isHidden ? "Afficher le menu" : "Cacher le menu"}
-        />
+      <button
+        type="button"
+        className={`button-title ${isHidden ? "button-collapsed" : "button-expanded"}`}
+        onClick={handleMenuStateChange}
+      >
+        {isHidden ? (
+          showImage ? (
+            <img
+              src="images/Logo-footer-menu/Logo_voir_menu-compacter.png"
+              alt="Afficher le menu"
+              className="icon show-image"
+            />
+          ) : (
+            "User Name"
+          )
+        ) : (
+          "User Name"
+        )}
       </button>
     </>
   );
