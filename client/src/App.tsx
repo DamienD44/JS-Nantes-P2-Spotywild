@@ -3,6 +3,7 @@ import "./Globals.css";
 import { useState } from "react";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
+import ButtonMenu from "./components/menuComponent/ButtonMenu/ButtonMenu";
 import Menu from "./components/menuComponent/Menu";
 
 function App() {
@@ -17,8 +18,14 @@ function App() {
       <Header />
       <main className="the-main">
         <Outlet />
-        <section className="column-2">
-          <Menu isHidden={isHidden} menuState={menuState} />
+
+        <section className="menu-container">
+          <ButtonMenu isHidden={isHidden} menuState={menuState} />
+          <section
+            className={`column-menu ${isHidden ? "background-hidden" : "background-visible"}`}
+          >
+            <Menu isHidden={isHidden} />
+          </section>
         </section>
       </main>
       <Footer />
