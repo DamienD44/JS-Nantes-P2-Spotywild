@@ -1,17 +1,18 @@
-import musicData from "../assets/music-data.json";
-import MusicSections from "../components/MusicSections/MusicSections";
+// import musicData from "../assets/music-data.json";
+// import MusicSections from "../components/MusicSections/MusicSections";
 
 function App() {
   return (
     <main>
-      {musicData.map((el) => {
+      <h1>Fix the database</h1>
+      {/* {musicData.map((el) => {
         return (
           <MusicSections
-            key={`${el.genre}-${el.Artistes[0].id}`} // Utiliser genre + id comme clé unique
-            Artists={el.Artistes}
+            key={`${el.genre}-${el.artistes[0].id}`} // Utiliser genre + id comme clé unique
+            Artists={el.artistes}
           />
         );
-      })}
+      })} */}
     </main>
   );
 }
