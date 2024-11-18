@@ -1,13 +1,13 @@
 import musicData from "../assets/music-data.json";
 import MusicSections from "../components/MusicSections/MusicSections";
 
-function App() {
+function Accueil() {
   return (
     <main>
       {musicData.map((el) => {
         return (
           <MusicSections
-            key={`${el.genre}-${el.Artistes[0].id}`} // Utiliser genre + id comme clé unique
+            key={`${el.genre}-${el.Artistes[0].id}`}
             Artists={el.Artistes}
           />
         );
@@ -16,4 +16,4 @@ function App() {
   );
 }
 
-export default App;
+export default Accueil;

@@ -1,55 +1,60 @@
-import { useState } from "react";
 import "./menu.css";
+import { useState } from "react";
 
 export default function Menumob() {
-  const [showModel, setShowModel] = useState(false);
+  const [Shoumodel, setShoumodel] = useState(false);
 
   return (
-    <header className="flex">
+    <header className="ccontainer  flex">
       <button
-        type="button"
-        onClick={() => setShowModel(true)}
         className="menus"
+        type="button"
+        onClick={() => {
+          setShoumodel(true);
+        }}
       >
         <img
-          src="images/Logo-footer-menu/Logo_cacher_menu-compacter.png"
-          alt="Menu Icon"
-          className="logo-imag"
+          className="burgurm"
+          src="../images/Logo-footer-menu/Logo_voir_menu-compacter.png"
+          alt=""
         />
       </button>
-      <div />
+      <div> </div>
+      <nav className="dispart">
+        <ul className="flex">
+          <li>
+            <a href={"./Home"}>Accueil</a>
+          </li>
+          <li>
+            <a href={"/"}>Albums</a>
+          </li>
+          <li>
+            <a href={"./Accueil"}>Titres</a>
+          </li>
+        </ul>
+      </nav>
 
-      {showModel && (
-        <div className="fixed">
-          <ul className="model">
-            <li>
+      {Shoumodel && (
+        <div className=" fixed">
+          <ul className=" model ">
+            <li className="close">
               <button
                 type="button"
-                onClick={() => setShowModel(false)}
-                className="close-btn"
+                onClick={() => {
+                  setShoumodel(false);
+                }}
               >
                 X
               </button>
             </li>
             <li>
-              <link rel="icon" href="favicon.ico" />
-              About
+              <a href={"./Home"}>Accueil</a>
             </li>
             <li>
-              Articles
-              <link rel="icon" href="favicon.ico" />
+              <a href={"/"}>Albums</a>
             </li>
             <li>
-              Projects
-              <link rel="icon" href="favicon.ico" />
-            </li>
-            <li>
-              Speaking
-              <link rel="icon" href="favicon.ico" />
-            </li>
-            <li>
-              User
-              <link rel="icon" href="favicon.ico" />
+              <a href={"/"}>Titres</a>
             </li>
           </ul>
         </div>
