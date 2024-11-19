@@ -67,22 +67,34 @@ function Carousel() {
       className: "center",
       centerMode: true,
       infinite: true,
-      centerPadding: "60px",
+      centerPadding: "0",
       slidesToShow: 3,
       speed: 500,
       arrows: true,
     };
     return (
-      <div className="slider-container">
-        <Slider {...settings}>
-          {artists.map((artist) => (
-            <div key={artist.id} className="each-slide">
-              <img src={artist.imgSrc} alt={artist.name} />
-              <h2>{artist.name}</h2>
-            </div>
-          ))}
-        </Slider>
-      </div>
+      <>
+        <div className="slider-containerArtist">
+          <Slider {...settings}>
+            {artists.map((artist) => (
+              <div key={artist.id} className="each-slide">
+                <img src={artist.imgSrc} alt={artist.name} />
+                <h2>{artist.name}</h2>
+              </div>
+            ))}
+          </Slider>
+        </div>
+        <div className="slider-containerAlbum">
+          <Slider {...settings}>
+            {artists.map((artist) => (
+              <div key={artist.id} className="each-slide">
+                <img src={artist.imgSrc} alt={artist.name} />
+                <h2>{artist.name}</h2>
+              </div>
+            ))}
+          </Slider>
+        </div>
+      </>
     );
   }
 }
