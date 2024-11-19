@@ -14,7 +14,6 @@ function App() {
   return (
     <main>
       {dataMusic.map((el) => {
-        console.info(el);
         return (
           <MusicSections
             key={el.id} // Utiliser genre + id comme clé unique
