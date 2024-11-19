@@ -1,5 +1,6 @@
 import "./MusicSections.css";
 import type { ArtistI } from "../../types/musicSection";
+import ArtistI "/types/musicSection"
 
 function MusicSections({ Artists }: { Artists: ArtistI[] }) {
   const slicedArray: ArtistI[] = Artists.sort(() => Math.random() - 0.5).slice(

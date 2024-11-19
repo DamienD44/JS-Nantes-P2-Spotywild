@@ -1,6 +1,7 @@
 import "./CategoryCard.css";
 
 interface CharacterI {
+  id: number;
   titreImg: string;
   genre: string;
   color: string;
