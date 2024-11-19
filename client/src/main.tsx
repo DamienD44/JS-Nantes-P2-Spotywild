@@ -1,5 +1,4 @@
 // Import necessary modules from React and React Router
-import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
@@ -9,10 +8,10 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import App from "./App";
 import Accueil from "./pages/Accueil";
 import Albums from "./pages/Albums";
-import SearchPage from "./pages/SearchPage";
-import Titles from "./pages/titles";
 import Conditions from "./pages/Conditions";
 import Politique from "./pages/Politique";
+import SearchPage from "./pages/SearchPage";
+import Titles from "./pages/titles";
 
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
@@ -67,9 +66,9 @@ if (rootElement == null) {
 
 // Render the app inside the root element
 createRoot(rootElement).render(
-  <StrictMode>
-    <RouterProvider router={router} />
-  </StrictMode>,
+  // <StrictMode>
+  <RouterProvider router={router} />,
+  // </StrictMode>,
 );
 
 /**
