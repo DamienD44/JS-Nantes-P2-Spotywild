@@ -21,7 +21,7 @@
   font-size: var(--font-size-normal);
 }
 body {
-  width: 100vw;
+  /* width: 100vw; */
   color: var(--text-light-color);
   background-color: var(--primary-color);
 }
