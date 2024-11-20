@@ -10,6 +10,7 @@ interface ArtistI {
 }
 
 interface AlbumI {
+  id: number;
   albumName: string;
   albumImg: string;
   description: string;
