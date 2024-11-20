@@ -1,0 +1,16 @@
+.subscribe {
+  display: flex;
+  align-items: center;
+}
+
+.subscribe p {
+  color: rgba(255, 255, 255, 0.623);
+  margin-left: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.subscribe img {
+  width: auto;
+  height: 25px;
+  margin-left: 2rem;
+}

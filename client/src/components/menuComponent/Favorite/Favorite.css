@@ -1,0 +1,16 @@
+.favorite {
+  display: flex;
+  align-items: center;
+}
+
+.favorite p {
+  color: rgba(255, 255, 255, 0.623);
+  margin-left: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.favorite img {
+  width: auto;
+  height: 25px;
+  margin-left: 2rem;
+}

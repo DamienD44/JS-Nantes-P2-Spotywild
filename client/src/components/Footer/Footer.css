@@ -1,0 +1,19 @@
+.mentions {
+  display: flex;
+  flex-flow: column wrap;
+  font-size: 0.8rem;
+  gap: 1rem;
+  text-align: center;
+}
+.icone {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+.icone > a > img {
+  height: 25px;
+  width: auto;
+}
+.spoty {
+  margin-left: 10px;
+}

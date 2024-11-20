@@ -1,0 +1,85 @@
+.button-title {
+  background: none;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  height: 50px;
+  max-width: 100%;
+  color: white;
+  cursor: pointer;
+  margin-top: 1rem;
+  z-index: 10;
+  position: relative;
+}
+
+.button-title:hover {
+  background-color: rgba(58, 56, 56, 0.842);
+  border-radius: 10%;
+}
+
+.button-expanded {
+  display: flex;
+  justify-self: right;
+  align-self: center;
+  width: 100%;
+  transition: width 1.5s ease;
+  animation: expandButton 2s forwards;
+}
+
+.button-collapsed {
+  display: flex;
+  justify-self: right;
+  align-items: center;
+  width: 100%;
+  border-radius: 5%;
+  transition: width 1s ease;
+  padding: 0;
+  box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.3);
+  animation: shrinkButton 2s 1s forwards;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+  animation: imgOpacity 2s forwards;
+}
+
+@keyframes shrinkButton {
+  0% {
+    width: 100%;
+    padding: 10px 20px;
+  }
+  100% {
+    width: 40px;
+    padding: 10px;
+  }
+}
+
+@keyframes imgOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes expandButton {
+  0% {
+    width: 40px;
+    padding: 10px;
+    box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.3);
+    font-size: 0.4rem;
+  }
+  80% {
+    box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    width: 100%;
+    padding: 10px 20px;
+    box-shadow: none;
+    font-size: 1.8rem;
+  }
+}

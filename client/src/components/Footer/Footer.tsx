@@ -1,24 +1,19 @@
 import { Link } from "react-router-dom";
 import "./Footer.css";
-import LanguageChoice from "./LanguageChoice";
+import LanguageChoice from "../LanguageChoice/LanguageChoice";
 
 function Footer() {
   return (
     <footer className="footer">
-      <div>
-        <LanguageChoice />
-      </div>
-      <div className="Mentions">
+      <LanguageChoice />
+      <div className="mentions">
         <p>© 2024 Tous droits réservés, SpotyWild®</p>
-        <p>
-          <Link className="politique" to="/Politique de confidentialité">
-            Politique de confidentialité
-          </Link>
-          <span>|</span>
-          <Link className="condition" to="/Conditions générales">
-            Conditions générales
-          </Link>
-        </p>
+        <Link className="politique" to="/Politique">
+          Politique de confidentialité
+        </Link>
+        <Link className="condition" to="/Conditions">
+          Conditions générales
+        </Link>
       </div>
 
       {/* Section Réseaux Sociaux */}

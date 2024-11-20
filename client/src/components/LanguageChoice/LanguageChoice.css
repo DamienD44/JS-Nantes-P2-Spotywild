@@ -4,23 +4,32 @@
 
 .language-selector {
   display: flex;
-  margin-left: 8px;
 }
 .langue {
   display: flex;
-  padding: 5%;
-
+  padding: 10px;
   box-shadow: 0 0 5px 1px white;
-  width: 150%;
+  max-width: 150px;
+  height: auto;
+  align-items: center;
+}
+.logo {
+  height: 30px;
 }
 #language {
   border: none;
   background: none;
   color: white;
+  width: 100%;
+}
+option {
+  width: 200%;
+  padding: 5px;
 }
 .language-selector option {
   background-color: black;
 }
 .langue img {
-  margin: 0 0.5rem 0 0.5rem;
+  width: 20%;
+  height: auto;
 }

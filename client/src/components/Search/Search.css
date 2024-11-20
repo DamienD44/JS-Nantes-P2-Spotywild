@@ -1,13 +1,34 @@
 :root {
+  /* Desktop */
   --header-input-width: 350px;
   --header-input-height: 35px;
-  --header-input-radius: calc(var(--header-input-height) / 2);
+  --header-input-radius: 20px;
+  /* Tablet */
+  --header-input-tablet-width: 45px;
+  --header-input-tablet-height: 45px;
+  --header-input-tablet-radius: 100%;
 }
 .header-input {
   width: var(--header-input-width);
   height: var(--header-input-height);
-  border: none;
   border-radius: var(--header-input-radius);
   box-shadow: 0 0 5px 3px #fff;
   padding-left: 1rem;
+  transition: width 0.2s ease-in-out, border-radius .2s ease-in-out;
+}
+@media screen and (max-width: 768px) {
+  .header-input {
+    background-image: url("/images/loupe-30-30.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    color: black;
+    width: var(--header-input-tablet-width);
+    height: var(--header-input-tablet-height);
+    border-radius: var(--header-input-tablet-radius);
+    padding: 0;
+    transition: width 0.2s ease-in-out, border-radius .2s ease-in-out;
+  }
+  .header-input::placeholder {
+    opacity: 0;
+  }
 }

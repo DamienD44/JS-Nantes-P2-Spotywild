@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./Header.css";
 import Search from "../Search/Search";
 
@@ -11,7 +11,9 @@ function Header() {
             src="/images/logo-spotywild.png"
             alt="Logo du site de SpotyWild"
           />
-          <Search />
+          <Link to="searchpage">
+            <Search />
+          </Link>
           <ul>
             <li>
               <NavLink to="/">Accueil</NavLink>
