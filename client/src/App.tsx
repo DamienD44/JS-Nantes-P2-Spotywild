@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Outlet } from "react-router-dom";
 
 import Footer from "./components/Footer/Footer";
@@ -10,15 +10,6 @@ import "./Globals.css";
 
 function App() {
   const [isHidden, setIsHidden] = useState(false);
-  const [dataMusic, setDataMusic] = useState();
-
-  useEffect(() => {
-    fetch("http://localhost:4000/api/music-data")
-      .then((res) => res.json())
-      .then((data) => setDataMusic(data));
-  }, []);
-
-  console.warn("Réception des données :", dataMusic);
 
   const menuState = () => {
     setIsHidden((prevState) => !prevState);
@@ -28,7 +19,9 @@ function App() {
     <>
       <Header />
       <main className="the-main">
-        <Outlet />
+        <section className="section-outlet">
+          <Outlet />
+        </section>
 
         <section className="menu-container">
           <ButtonMenu isHidden={isHidden} menuState={menuState} />
