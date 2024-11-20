@@ -18,8 +18,8 @@ interface AlbumI {
   releaseYear?: number;
 }
 
-interface MusicData {
-  id: nujmber;
+export interface MusicData {
+  id: number;
   genre: string;
   artistes: ArtistI[];
 }

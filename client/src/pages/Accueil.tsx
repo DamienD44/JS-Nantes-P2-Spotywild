@@ -16,16 +16,11 @@ function Accueil() {
   }, []);
 
   return (
-    <main>
-      <section className="home-main">
-        <h1>Page Accueil</h1>
-        <Carousel />
-      </section>
+    <>
       {dataMusic.map((el) => {
-        console.info(el);
         return <MusicSections key={el.id} Artists={el.artistes} />;
       })}
-    </main>
+    </>
   );
 }
 
