@@ -5,7 +5,7 @@ function TitleCard() {
     <>
       <section className="title-card">
         <img src="images/ReferenceArtiste.jpg" alt="Portrait de l'artiste" />
-        <span>Titre de la chansson</span>
+        <span>Titre de la chanson</span>
       </section>
     </>
   );
