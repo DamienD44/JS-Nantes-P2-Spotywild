@@ -17,13 +17,13 @@ header ul {
   gap: 30px;
 }
 
-header ul li a {
+header ul li .link-menu {
   color: rgb(244 244 245);
   opacity: 0.9;
   font-size: 0.88;
   font-weight: 500;
 }
-header ul li a:hover {
+header ul li .link-menu:hover {
   color: rgb(93, 188, 252);
   opacity: 1;
   font-size: 0.9;
@@ -91,7 +91,7 @@ header ul.model li:last-child {
   font-size: 34px;
   transition: 0.3s;
 }
-.burgur-menu {
+.burger-menu {
   height: 40px;
 }
 .close {
