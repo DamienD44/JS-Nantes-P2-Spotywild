@@ -1,4 +1,6 @@
-export interface ArtistI {
+import Albums from "../pages/Albums";
+
+interface ArtistI {
   id: number;
   name: string;
   country: string;
@@ -13,5 +15,11 @@ interface AlbumI {
   albumImg: string;
   description: string;
   songs: string[];
-  // releaseYear?: number;
+  releaseYear?: number;
+}
+
+interface MusicData {
+  id: nujmber;
+  genre: string;
+  artistes: ArtistI[];
 }
