@@ -1,3 +1,7 @@
+import Carousel from "../components/Carousel/Carousel";
+import "../components/Carousel/Carousel.css";
+import "./Accueil.css";
+
 import { useEffect, useState } from "react";
 import MusicSections from "../components/MusicSections/MusicSections";
 import type { MusicData } from "../types/musicSection";
