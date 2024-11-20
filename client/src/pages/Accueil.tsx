@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import MusicSections from "../components/MusicSections/MusicSections";
 import type { MusicData } from "../types/musicSection";
 
-function App() {
+function Accueil() {
   const [dataMusic, setDataMusic] = useState<MusicData[]>([]);
 
   useEffect(() => {
@@ -20,4 +20,4 @@ function App() {
   );
 }
 
-export default App;
+export default Accueil;
