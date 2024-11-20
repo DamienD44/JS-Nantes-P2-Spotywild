@@ -29,7 +29,6 @@
 .each-slide {
   justify-items: center;
   height: 95%;
-  /* border: 1px solid white; */
 }
 
 .slick-track {
