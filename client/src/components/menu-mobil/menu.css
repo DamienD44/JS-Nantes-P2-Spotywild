@@ -1,13 +1,3 @@
-:root {
-  --premair: #000;
-  --secandry: #19181b;
-  --burgeur: rgba(63, 63, 70, 0.4);
-  --title: rgb(244 244 245);
-  --subtitle: rgb(161 161 170);
-  --bagraoundh: rgb(39, 39, 42);
-  --bleu: rgb(93, 188, 252);
-}
-
 .ccontainer {
   width: 80%;
   margin-left: auto;
@@ -28,20 +18,17 @@ header ul {
 }
 
 header ul li a {
-  color: var(--title);
+  color: rgb(244 244 245);
   opacity: 0.9;
   font-size: 0.88;
   font-weight: 500;
 }
 header ul li a:hover {
-  color: var(--bleu);
+  color: rgb(93, 188, 252);
   opacity: 1;
   font-size: 0.9;
 }
 
-.border {
-  border: solid 3px rgb(31, 239, 16);
-}
 header button {
   position: absolute;
   top: 0;
@@ -55,12 +42,6 @@ header button {
 header {
   justify-content: space-between;
   padding: 0 2rem;
-}
-header.flex nav {
-  background-color: var(--bagraoundh);
-  padding: 1rem 2rem;
-  border-radius: 55px;
-  box-shadow: 2px 1px 40px rgba(42, 41, 41, 0.57);
 }
 
 .menus {
@@ -82,13 +63,12 @@ header ul.model {
   border-radius: 1rem;
   padding: 1rem 2rem;
   text-align: center;
-  background: var(--secandry);
+  background: #19181b;
   display: none;
 }
 header ul.model li {
   border-bottom: solid 1px rgba(49, 49, 49, 0.844);
   padding-bottom: 2rem;
-  padding-top: 1rem;
 }
 
 header ul.model li:last-child {
@@ -97,13 +77,19 @@ header ul.model li:last-child {
 
 .fixed ul li button {
   all: unset;
-  border: none;
+  padding: 10px;
   color: red;
-  font-size: 23px;
+  font-size: 33px;
   font-weight: bold;
   background: none;
-  margin: 0;
-  padding: 0;
+  position: absolute;
+  left: 80px;
+  top: 58px;
+}
+
+.fixed ul li button:hover {
+  font-size: 34px;
+  transition: 0.3s;
 }
 .burgurm {
   height: 40px;
@@ -116,6 +102,7 @@ header ul.model li:last-child {
 @media (max-width: 700px) {
   header.flex nav {
     display: none;
+    z-index: 50;
   }
   header ul.model {
     width: 85%;
@@ -123,14 +110,21 @@ header ul.model li:last-child {
     margin-right: auto;
     margin-top: 2rem;
     border-radius: 1rem;
-    padding: 1rem 2rem;
+    padding: 1rem 3rem;
     text-align: center;
-    background: var(--secandry);
-    display: block;
+    background: #19181b;
+    display: flex;
+    flex-direction: column;
+    z-index: 50;
   }
 
   .menus {
     display: block;
     z-index: 2;
+  }
+
+  header ul.model li:first-child {
+    border: none;
+    z-index: 50;
   }
 }

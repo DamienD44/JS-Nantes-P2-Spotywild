@@ -1,54 +1,41 @@
-import "./menu.css";
+import "./Menu.css";
 import { useState } from "react";
 
-export default function Menumob() {
-  const [Shoumodel, setShoumodel] = useState(false);
+export default function MenuMob() {
+  const [Showmodel, setShowmodel] = useState(false);
 
   return (
-    <header className="ccontainer  flex">
+    <header className="container flex">
       <button
         className="menus"
         type="button"
         onClick={() => {
-          setShoumodel(true);
+          setShowmodel(true);
         }}
       >
         <img
           className="burgurm"
           src="../images/Logo-footer-menu/Logo_voir_menu-compacter.png"
-          alt=""
+          alt="imagLogo"
         />
       </button>
       <div> </div>
-      <nav className="dispart">
-        <ul className="flex">
-          <li>
-            <a href={"./Home"}>Accueil</a>
-          </li>
-          <li>
-            <a href={"/"}>Albums</a>
-          </li>
-          <li>
-            <a href={"./Accueil"}>Titres</a>
-          </li>
-        </ul>
-      </nav>
 
-      {Shoumodel && (
+      {Showmodel && (
         <div className=" fixed">
           <ul className=" model ">
             <li className="close">
               <button
                 type="button"
                 onClick={() => {
-                  setShoumodel(false);
+                  setShowmodel(false);
                 }}
               >
                 X
               </button>
             </li>
             <li>
-              <a href={"./Home"}>Accueil</a>
+              <a href={"/Home"}>Accueil</a>
             </li>
             <li>
               <a href={"/"}>Albums</a>

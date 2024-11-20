@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import "./Header.css";
 import Search from "../Search/Search";
-import Menumob from "../menu-mobil/Menumob";
+import MenuMob from "../menu-mobil/Menumob";
 import "../menu-mobil/menu.css";
 
 function Header() {
@@ -10,7 +10,7 @@ function Header() {
       <header>
         <nav className="header-container">
           <section className="nav-section">
-            <Menumob />
+            <MenuMob />
 
             <img
               src="/images/logo-spotywild.png"
