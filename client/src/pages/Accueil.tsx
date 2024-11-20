@@ -3,7 +3,8 @@ import "../components/Carousel/Carousel.css";
 import "./Accueil.css";
 
 import { useEffect, useState } from "react";
-import type { MusicData } from "../types/musicSection";
+
+import type { CarouselDataI, MusicData } from "../types/musicSection";
 
 function Accueil() {
   const [dataMusic, setDataMusic] = useState<MusicData[]>([]);
@@ -14,27 +15,42 @@ function Accueil() {
       .then((data) => setDataMusic(data));
   }, []);
 
-  const lstArtist = [];
+  const artistsCarouselData: Partial<CarouselDataI>[] = [];
+
   for (const genre of dataMusic) {
     for (const artist of genre.artistes) {
-      lstArtist.push(artist);
+      const carouselData: Partial<CarouselDataI> = {};
+
+      carouselData.image = artist.imgSrc;
+      carouselData.description = artist.description;
+      carouselData.name = artist.name;
+      carouselData.id = artist.id;
+
+      artistsCarouselData.push(carouselData);
     }
   }
 
-  // const lstAlbums = [];
-  // for (const artists of lstArtist) {
-  //   for (const album of artists.albums) {
-  //     console.table(album);
-  //   }
-  // }
+  const albumsCarouselData: Partial<CarouselDataI>[] = [];
+
+  for (const data of dataMusic) {
+    for (const art of data.artistes) {
+      for (const alb of art.albums) {
+        const carouselData: Partial<CarouselDataI> = {};
+
+        carouselData.image = alb.albumImg;
+        carouselData.description = alb.description;
+        carouselData.name = alb.albumName;
+        carouselData.id = alb.id;
+
+        albumsCarouselData.push(carouselData);
+      }
+    }
+  }
 
   return (
     <>
-      {/* : { artists: ArtistI[]  */}
-      <Carousel artists={lstArtist} />
-      {/* {dataMusic.map((el) => {
-        return <MusicSections key={el.id} Artists={el.artistes} />;
-      })} */}
+      <Carousel artists={artistsCarouselData} />
+      <Carousel artists={albumsCarouselData} />
     </>
   );
 }

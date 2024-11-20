@@ -22,3 +22,10 @@ interface AlbumI {
   description: string;
   songs: string[];
 }
+
+export interface CarouselDataI {
+  image: string;
+  name: string;
+  description: string;
+  id: number;
+}
