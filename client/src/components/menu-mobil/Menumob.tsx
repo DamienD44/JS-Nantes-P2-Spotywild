@@ -14,12 +14,11 @@ export default function MenuMob() {
         }}
       >
         <img
-          className="burgurm"
+          className="burgur-menu"
           src="../images/Logo-footer-menu/Logo_voir_menu-compacter.png"
-          alt="imagLogo"
+          alt="Logo"
         />
       </button>
-      <div> </div>
 
       {Showmodel && (
         <div className=" fixed">
