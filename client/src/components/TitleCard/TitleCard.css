@@ -1,4 +1,4 @@
-.titleCard {
+.title-card {
   display: flex;
   align-items: center;
   box-shadow: 1px 0 5px 1px white;
@@ -7,7 +7,7 @@
   margin: 1rem;
 }
 
-.titleCard img {
+.title-card img {
   height: 60px;
   width: auto;
   margin-right: 2rem;
