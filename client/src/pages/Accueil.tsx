@@ -12,16 +12,11 @@ function App() {
   }, []);
 
   return (
-    <main>
+    <>
       {dataMusic.map((el) => {
-        return (
-          <MusicSections
-            key={el.id} // Utiliser genre + id comme clé unique
-            Artists={el.artistes}
-          />
-        );
+        return <MusicSections key={el.id} Artists={el.artistes} />;
       })}
-    </main>
+    </>
   );
 }
 

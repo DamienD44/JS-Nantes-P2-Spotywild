@@ -13,7 +13,7 @@ function MusicSections({ Artists }: { Artists: ArtistI[] }) {
         return (
           <figure className="imgS" key={el.id}>
             <img className="images" src={el.imgSrc} alt={el.name} />{" "}
-            <figcaption>{el.name}</figcaption>
+            <figcaption className="figcaption-music">{el.name}</figcaption>
           </figure>
         );
       })}

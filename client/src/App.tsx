@@ -19,7 +19,9 @@ function App() {
     <>
       <Header />
       <main className="the-main">
-        <Outlet />
+        <section className="section-outlet">
+          <Outlet />
+        </section>
 
         <section className="menu-container">
           <ButtonMenu isHidden={isHidden} menuState={menuState} />
