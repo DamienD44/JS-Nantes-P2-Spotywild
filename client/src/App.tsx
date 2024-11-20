@@ -10,15 +10,6 @@ import "./Globals.css";
 
 function App() {
   const [isHidden, setIsHidden] = useState(false);
-  const [dataMusic, setDataMusic] = useState();
-
-  useEffect(() => {
-    fetch("http://localhost:4000/api/music-data")
-      .then((res) => res.json())
-      .then((data) => setDataMusic(data));
-  }, []);
-
-  console.warn("Réception des données :", dataMusic);
 
   const menuState = () => {
     setIsHidden((prevState) => !prevState);
