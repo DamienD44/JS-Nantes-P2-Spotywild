@@ -1,0 +1,24 @@
+.album-container {
+  display: flex;
+  
+  gap: 20px;
+}
+.album-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 200px;
+}
+.album-card img {
+    display: grid;
+    grid-template-rows: 1fr 60px;
+    grid-template-columns: 1fr;
+    width: 250px;
+    height: 350px;
+    border-radius: 16px;
+    background-color: rgb(230, 230, 230);
+    color: #101010;
+    font-weight: bold;
+    transition: transform .2s ease-in-out;
+    border: 7px solid #3e866a;
+}
+.
