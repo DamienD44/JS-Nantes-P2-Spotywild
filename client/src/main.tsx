@@ -9,6 +9,7 @@ import App from "./App";
 import Albums from "./pages/Albums";
 import Artists from "./pages/Artists";
 import Conditions from "./pages/Conditions";
+import Genre from "./pages/Genre";
 import Home from "./pages/Home";
 import Politique from "./pages/Politique";
 import SearchPage from "./pages/SearchPage";
@@ -36,7 +37,7 @@ const router = createBrowserRouter([
         element: <Albums />,
       },
       {
-        path: "titles",
+        path: "artists",
         element: <Artists />,
       },
       {
@@ -50,6 +51,12 @@ const router = createBrowserRouter([
       {
         path: "Politique",
         element: <Politique />,
+      },
+      {
+        path: "Genre/:id",
+        element: <Genre />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:4000/api/music-data/${params.id}`),
       },
     ], // Renders the App component for the home page
   },

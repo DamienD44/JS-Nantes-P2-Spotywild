@@ -1,16 +1,33 @@
 import CategoryCard from "../components/CategoryCard/CategoryCard";
 import "./SearchPage.css";
-import dataBase from "../assets/music-data.json";
+
+import { useEffect, useState } from "react";
+import type { MusicData } from "../types/musicSection";
 
 function SearchPage() {
+  const [dataMusic, setDataMusic] = useState<MusicData[]>([]);
+
+  useEffect(() => {
+    fetch("http://localhost:4000/api/music-data")
+      .then((res) => res.json())
+      .then((data) => setDataMusic(data));
+  }, []);
+
   return (
     <>
       <section className="category-container">
         <h1>Page de recherche</h1>
         <section className="category-wrapper">
-          {dataBase.map((genre) => {
+          {dataMusic.map((genre) => {
             return (
-              <CategoryCard key={dataBase.indexOf(genre)} character={genre} />
+              <CategoryCard
+                key={genre.id}
+                genre={genre.genre}
+                id={genre.id}
+                titreImg={genre.titreImg}
+                color={genre.color}
+                artistes={genre.artistes}
+              />
             );
           })}
         </section>
