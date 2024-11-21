@@ -29,6 +29,7 @@ function Albums() {
 
   return (
     <>
+      <h1 className="albums-title">Les Artistes</h1>
       <section className="section-albums">
         {albums.map((album) => (
           <MusicSections

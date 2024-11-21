@@ -1,6 +1,6 @@
 import Carousel from "../components/Carousel/Carousel";
 import "../components/Carousel/Carousel.css";
-import "./Accueil.css";
+import "./Home.css";
 
 import { useEffect, useState } from "react";
 
