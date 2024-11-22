@@ -1,13 +1,16 @@
 // Import necessary modules from React and React Router
 import { createRoot } from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import type { MusicData } from "./types/musicSection.d";
 
 /* ************************************************************************* */
 
 // Import the main app component
 import App from "./App";
+import AlbumDetails from "./pages/AlbumDetails";
 import Albums from "./pages/Albums";
 import Artists from "./pages/Artists";
+import ArtistDetails from "./pages/ArtistsDetails";
 import Conditions from "./pages/Conditions";
 import Home from "./pages/Home";
 import Politique from "./pages/Politique";
@@ -50,6 +53,36 @@ const router = createBrowserRouter([
       {
         path: "Politique",
         element: <Politique />,
+      },
+      {
+        path: "artistsdetails/:id",
+        element: <ArtistDetails />,
+        loader: async ({ params }) => {
+          try {
+            const response = await fetch(
+              "http://localhost:4000/api/music-data",
+            );
+            if (!response.ok) {
+              throw new Error("Failed to fetch genres");
+            }
+            const data = await response.json();
+            const artistData = data.find((items: MusicData) => {
+              console.info(items);
+            });
+
+            if (!artistData) {
+              throw new Error(`Artist '${params.id}' not found`);
+            }
+            return artistData;
+          } catch (error) {
+            console.error("Loader error:", error);
+            throw error;
+          }
+        },
+      },
+      {
+        path: "albumdetails/:id",
+        element: <AlbumDetails />,
       },
     ], // Renders the App component for the home page
   },
