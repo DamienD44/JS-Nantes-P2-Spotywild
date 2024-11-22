@@ -3,7 +3,7 @@ import MusicSections from "../components/MusicSections/MusicSections";
 import type { MusicData } from "../types/musicSection";
 import "./Artists.css";
 
-function Titles() {
+function Artists() {
   const [dataMusic, setDataMusic] = useState<MusicData[]>([]);
 
   useEffect(() => {
@@ -22,4 +22,4 @@ function Titles() {
   );
 }
 
-export default Titles;
+export default Artists;

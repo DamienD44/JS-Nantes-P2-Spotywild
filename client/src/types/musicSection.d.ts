@@ -15,12 +15,12 @@ interface ArtistI {
   albums: AlbumI[];
 }
 
-interface AlbumI {
+export interface AlbumI {
   id: number;
   albumName: string;
   albumImg: string;
   description: string;
-  songs: string[];
+  songs: [];
 }
 
 export interface CarouselDataI {
@@ -28,4 +28,7 @@ export interface CarouselDataI {
   name: string;
   description: string;
   id: number;
+}
+export interface Title {
+  songs: string;
 }

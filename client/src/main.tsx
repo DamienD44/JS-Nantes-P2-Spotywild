@@ -12,6 +12,7 @@ import Conditions from "./pages/Conditions";
 import Home from "./pages/Home";
 import Politique from "./pages/Politique";
 import SearchPage from "./pages/SearchPage";
+import AlbumDetails from "./components/Details";
 
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
@@ -50,6 +51,12 @@ const router = createBrowserRouter([
       {
         path: "Politique",
         element: <Politique />,
+      },
+      {
+        path: "details/:id",
+        element: <AlbumDetails />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:4000/api/music-data/${params.id}`),
       },
     ], // Renders the App component for the home page
   },
