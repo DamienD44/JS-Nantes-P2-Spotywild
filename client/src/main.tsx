@@ -36,7 +36,7 @@ const router = createBrowserRouter([
         element: <Albums />,
       },
       {
-        path: "titles",
+        path: "artists",
         element: <Artists />,
       },
       {
