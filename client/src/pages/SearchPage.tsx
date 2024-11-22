@@ -1,5 +1,6 @@
 import CategoryCard from "../components/CategoryCard/CategoryCard";
 import "./SearchPage.css";
+import { Link } from "react-router-dom";
 
 import { useEffect, useState } from "react";
 import type { MusicData } from "../types/musicSection";
@@ -18,18 +19,17 @@ function SearchPage() {
       <section className="category-container">
         <h1>Page de recherche</h1>
         <section className="category-wrapper">
-          {dataMusic.map((genre) => {
-            return (
+          {dataMusic.map((genre) => (
+            <Link to={`/Genre/${genre.genre}`} key={genre.id}>
               <CategoryCard
-                key={genre.id}
                 genre={genre.genre}
                 id={genre.id}
                 titreImg={genre.titreImg}
                 color={genre.color}
                 artistes={genre.artistes}
               />
-            );
-          })}
+            </Link>
+          ))}
         </section>
       </section>
     </>

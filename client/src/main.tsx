@@ -1,10 +1,9 @@
-// Import necessary modules from React and React Router
 import { createRoot } from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import type { MusicData } from "./types/musicSection";
 
 /* ************************************************************************* */
 
-// Import the main app component
 import App from "./App";
 import Albums from "./pages/Albums";
 import Artists from "./pages/Artists";
@@ -14,16 +13,8 @@ import Home from "./pages/Home";
 import Politique from "./pages/Politique";
 import SearchPage from "./pages/SearchPage";
 
-// Import additional components for new routes
-// Try creating these components in the "pages" folder
-
-// import About from "./pages/About";
-// import Contact from "./pages/Contact";
-
 /* ************************************************************************* */
 
-// Create router configuration with routes
-// You can add more routes as you build out your app!
 const router = createBrowserRouter([
   {
     element: <App />,
@@ -53,25 +44,46 @@ const router = createBrowserRouter([
         element: <Politique />,
       },
       {
-        path: "Genre/:id",
+        path: "Genre/:genre",
         element: <Genre />,
-        loader: ({ params }) =>
-          fetch(`http://localhost:4000/api/music-data/${params.id}`),
+        loader: async ({ params }) => {
+          try {
+            const response = await fetch(
+              "http://localhost:4000/api/music-data",
+            );
+
+            if (!response.ok) {
+              throw new Error("Failed to fetch genres");
+            }
+
+            const data = await response.json();
+
+            const genreData = data.find(
+              (item: MusicData) => item.genre === params.genre,
+            );
+
+            if (!genreData) {
+              throw new Error(`Genre '${params.genre}' not found`);
+            }
+
+            return genreData;
+          } catch (error) {
+            console.error("Loader error:", error);
+            throw error;
+          }
+        },
       },
-    ], // Renders the App component for the home page
+    ],
   },
-  // Try adding a new route! For example, "/about" with an About component
 ]);
 
 /* ************************************************************************* */
 
-// Find the root element in the HTML document
 const rootElement = document.getElementById("root");
 if (rootElement == null) {
   throw new Error(`Your HTML Document should contain a <div id="root"></div>`);
 }
 
-// Render the app inside the root element
 createRoot(rootElement).render(
   // <StrictMode>
   <RouterProvider router={router} />,
