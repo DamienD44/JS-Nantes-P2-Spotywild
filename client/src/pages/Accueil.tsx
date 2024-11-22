@@ -47,10 +47,6 @@ function Accueil() {
     }
   }
 
-  for (let n = 0; n < dataMusic.length; n++) {
-    console.table(dataMusic[0].artistes[3].albums);
-  }
-
   return (
     <>
       <Carousel artists={artistsCarouselData} />
