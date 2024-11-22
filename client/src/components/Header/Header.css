@@ -39,9 +39,14 @@
     grid-template-columns: .8fr .2fr;
     grid-template-rows: 1fr;
   }
-  .header-container img {
+  .header-container section {
     grid-column: 1 / 2;
     place-self: center;
+  }
+  .nav-section {
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
   }
   .header-container a {
     grid-column: 2 / 3;
