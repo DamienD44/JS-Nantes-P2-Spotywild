@@ -13,16 +13,12 @@ function Artists() {
   }, []);
 
   return (
-    <>
+    <section>
       <h1 className="artistes-title">Les Artistes</h1>
-      {dataMusic.map((el) => {
-        return (
-          <>
-            <MusicSections key={el.id} Artists={el.artistes} />
-          </>
-        );
-      })}
-    </>
+      {dataMusic.map((el) => (
+        <MusicSections key={el.id} Artists={el.artistes} genreId={el.id} />
+      ))}
+    </section>
   );
 }
 

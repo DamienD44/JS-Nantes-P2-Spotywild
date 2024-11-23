@@ -51,6 +51,7 @@ function Albums() {
                   albums: [],
                 },
               ]}
+              genreId={album.id}
             />
           </Link>
         ))}

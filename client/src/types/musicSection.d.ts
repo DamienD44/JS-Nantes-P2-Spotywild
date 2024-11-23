@@ -6,7 +6,7 @@ export interface MusicData {
   artistes: ArtistI[];
 }
 
-interface ArtistI {
+export interface ArtistI {
   id: number;
   name: string;
   country: string;
@@ -15,7 +15,7 @@ interface ArtistI {
   albums: AlbumI[];
 }
 
-interface AlbumI {
+export interface AlbumI {
   id: number;
   albumName: string;
   albumImg: string;

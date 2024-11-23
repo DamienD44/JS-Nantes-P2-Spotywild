@@ -1,7 +1,7 @@
 // Import necessary modules from React and React Router
 import { createRoot } from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import type { MusicData } from "./types/musicSection.d";
+import type { AlbumI, ArtistI } from "./types/musicSection.d";
 
 /* ************************************************************************* */
 
@@ -55,29 +55,23 @@ const router = createBrowserRouter([
         element: <Politique />,
       },
       {
-        path: "artistsdetails/:id",
+        path: "artistsdetails/:idGenre/:idArtist",
         element: <ArtistDetails />,
         loader: async ({ params }) => {
-          try {
-            const response = await fetch(
-              "http://localhost:4000/api/music-data",
-            );
-            if (!response.ok) {
-              throw new Error("Failed to fetch genres");
-            }
-            const data = await response.json();
-            const artistData = data.find((items: MusicData) => {
-              console.info(items);
-            });
+          const genreId = Number(params.idGenre);
+          const artistId = Number(params.idArtist);
+          const response = await fetch("http://localhost:4000/api/music-data");
+          const musicGenres = await response.json();
 
-            if (!artistData) {
-              throw new Error(`Artist '${params.id}' not found`);
-            }
-            return artistData;
-          } catch (error) {
-            console.error("Loader error:", error);
-            throw error;
-          }
+          const genre = musicGenres.find(
+            (genre: ArtistI) => genre.id === genreId,
+          );
+
+          const artist = genre.artistes.find(
+            (artist: AlbumI) => artist.id === artistId,
+          );
+
+          return artist;
         },
       },
       {
@@ -98,11 +92,7 @@ if (rootElement == null) {
 }
 
 // Render the app inside the root element
-createRoot(rootElement).render(
-  // <StrictMode>
-  <RouterProvider router={router} />,
-  // </StrictMode>,
-);
+createRoot(rootElement).render(<RouterProvider router={router} />);
 
 /**
  * Helpful Notes:
