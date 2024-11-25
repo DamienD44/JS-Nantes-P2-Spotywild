@@ -1,0 +1,75 @@
+/* Conteneur principal */
+.music-player {
+  font-family: "Arial", sans-serif;
+  background-color: #f9f9f9;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 400px;
+  margin: 20px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Titre principal */
+.music-player h2 {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Liste des musiques */
+.music-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.music-list li {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.music-list button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.music-list button:hover {
+  background-color: #0056b3;
+}
+
+/* Conteneur de lecture */
+.current-track {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.current-track h3 {
+  font-size: 1.5rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.current-track button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.current-track button:hover {
+  background-color: #218838;
+}
