@@ -9,7 +9,6 @@
   aspect-ratio: 16 / 9;
   padding: 1.5rem;
   border-radius: 10px;
-  background-color: #006450;
   overflow: hidden;
 }
 .category-card figcaption {
@@ -24,10 +23,6 @@
   left: 30%;
   top: 20%;
   transform: rotate(20deg);
-}
-.section-category-card {
-  width: 100%;
-  height: 100%;
 }
 @media screen and (max-width: 768px) {
   .category-card {
