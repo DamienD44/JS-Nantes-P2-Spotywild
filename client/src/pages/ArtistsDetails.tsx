@@ -1,9 +1,9 @@
 import { useLoaderData, useLocation } from "react-router-dom";
 import type { ArtistI } from "../types/musicSection";
 import "../styles/ArtistsDetails.css";
-import { useEffect, useState } from "react";
 import DOMPurify from "dompurify";
 import HtmlReactParser from "html-react-parser";
+import { useEffect, useState } from "react";
 
 export default function ArtistDetails() {
   const [artDescription, setArtDescription] = useState<string>("");
