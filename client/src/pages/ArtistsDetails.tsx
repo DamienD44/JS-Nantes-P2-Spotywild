@@ -7,7 +7,6 @@ import { useEffect, useState } from "react";
 
 export default function ArtistDetails() {
   const [artDescription, setArtDescription] = useState<string>("");
-  console.info(DOMPurify);
   const dataMusic = useLoaderData() as ArtistI;
 
   const albums = dataMusic.albums;
