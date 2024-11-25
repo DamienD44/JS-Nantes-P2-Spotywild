@@ -1,5 +1,5 @@
 import { useLoaderData } from "react-router-dom";
-import "./Genre.css";
+import "./GenreDetail.css";
 import type { MusicData } from "../types/musicSection";
 
 function Genre() {
@@ -14,7 +14,7 @@ function Genre() {
   return (
     <>
       <header className="genre-header" style={gradientStyle}>
-        <h1 className="genre-header-title">{genreData.genre}</h1>
+        <h1>{genreData.genre}</h1>
       </header>
 
       <main className="genre-main">
