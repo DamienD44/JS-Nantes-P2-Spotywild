@@ -41,7 +41,7 @@ function Albums() {
           >
             <MusicSections
               key={album.id}
-              Artists={[
+              artists={[
                 {
                   id: album.id,
                   name: album.albumName,

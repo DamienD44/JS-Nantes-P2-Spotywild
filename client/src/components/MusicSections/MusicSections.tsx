@@ -2,17 +2,15 @@ import "./MusicSections.css";
 import { Link, useLocation } from "react-router-dom";
 import type { ArtistI } from "../../types/musicSection";
 
-// }: { Artists: ArtistI[]; genreId: number }) {
-
 function MusicSections({
-  Artists,
+  artists,
   genreId,
-}: { Artists: ArtistI[]; genreId: number }) {
+}: { artists: ArtistI[]; genreId: number }) {
   const urlLocation = useLocation();
 
   return (
     <section className="music-section">
-      {Artists.map((el) => {
+      {artists.map((el) => {
         return (
           <Link
             key={el.id}

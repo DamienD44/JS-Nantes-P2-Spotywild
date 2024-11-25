@@ -16,7 +16,7 @@ function Artists() {
     <section>
       <h1 className="artistes-title">Les Artistes</h1>
       {dataMusic.map((el) => (
-        <MusicSections key={el.id} Artists={el.artistes} genreId={el.id} />
+        <MusicSections key={el.id} artists={el.artistes} genreId={el.id} />
       ))}
     </section>
   );
