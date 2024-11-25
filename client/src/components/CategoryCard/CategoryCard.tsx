@@ -1,26 +1,17 @@
 import "./CategoryCard.css";
+import { Link } from "react-router-dom";
 
-interface CharacterI {
-  id: number;
-  titreImg: string;
-  genre: string;
-  color: string;
-}
+import type { MusicData } from "../../types/musicSection";
 
-interface propChar {
-  character: CharacterI;
-}
-
-function CategoryCard({ character }: propChar) {
+function CategoryCard({ color, titreImg, genre }: MusicData) {
   return (
     <>
-      <figure
-        className="category-card"
-        style={{ backgroundColor: character.color }}
-      >
-        <figcaption>{character.genre}</figcaption>
-        <img src={character.titreImg} alt="" />
-      </figure>
+      <Link to={`/Genre/${genre}`}>
+        <figure className="category-card" style={{ backgroundColor: color }}>
+          <figcaption>{genre}</figcaption>
+          <img src={titreImg} alt="" />
+        </figure>
+      </Link>
     </>
   );
 }

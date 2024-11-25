@@ -24,7 +24,7 @@ function Albums() {
         }, []);
         setAlbums(allAlbums);
       })
-      .catch((err) => console.error("Erreur lors du fetch:", err));
+      .catch((err) => console.error("Erreur lors du fetch", err));
   }, []);
 
   return (

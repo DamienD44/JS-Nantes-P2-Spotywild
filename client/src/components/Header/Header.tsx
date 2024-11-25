@@ -28,7 +28,7 @@ function Header() {
               <NavLink to="albums">Albums</NavLink>
             </li>
             <li>
-              <NavLink to="titles">Artistes</NavLink>
+              <NavLink to="artists">Artistes</NavLink>
             </li>
           </ul>
         </nav>
