@@ -32,6 +32,8 @@ app.use(
   }),
 );
 
+app.use(express.static(path.join(__dirname, "public")));
+
 // With ["http://mysite.com", "http://another-domain.com"]
 // to be replaced with an array of your trusted origins
 

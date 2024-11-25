@@ -22,7 +22,7 @@ function Header() {
           </Link>
           <ul>
             <li>
-              <NavLink to="/">Accueil</NavLink>
+              <NavLink to="/">Home</NavLink>
             </li>
             <li>
               <NavLink to="albums">Albums</NavLink>

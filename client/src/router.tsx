@@ -1,13 +1,17 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
+import AlbumDetails from "./pages/AlbumDetails";
 import Albums from "./pages/Albums";
 import Artists from "./pages/Artists";
+import ArtistDetails from "./pages/ArtistsDetails";
 import Conditions from "./pages/Conditions";
 import Genre from "./pages/GenreDetail";
 import Home from "./pages/Home";
 import Politique from "./pages/Politique";
 import SearchPage from "./pages/SearchPage";
+
 import type { MusicData } from "./types/musicSection";
+import type { AlbumI, ArtistI } from "./types/musicSection.d";
 
 export const router = createBrowserRouter([
   {
@@ -36,6 +40,30 @@ export const router = createBrowserRouter([
       {
         path: "Politique",
         element: <Politique />,
+      },
+      {
+        path: "artistsdetails/:idGenre/:idArtist",
+        element: <ArtistDetails />,
+        loader: async ({ params }) => {
+          const genreId = Number(params.idGenre);
+          const artistId = Number(params.idArtist);
+          const response = await fetch("http://localhost:4000/api/music-data");
+          const musicGenres = await response.json();
+
+          const genre = musicGenres.find(
+            (genre: ArtistI) => genre.id === genreId,
+          );
+
+          const artist = genre.artistes.find(
+            (artist: AlbumI) => artist.id === artistId,
+          );
+
+          return artist;
+        },
+      },
+      {
+        path: "albumdetails/:id",
+        element: <AlbumDetails />,
       },
       {
         path: "Genre/:genre",

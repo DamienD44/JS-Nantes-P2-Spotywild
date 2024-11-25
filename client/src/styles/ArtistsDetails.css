@@ -1,0 +1,67 @@
+.art-detail-section-container {
+  display: flex;
+  width: 100%;
+  flex-flow: column wrap;
+  padding-right: 2rem;
+  justify-content: center;
+  gap: 3rem;
+  align-items: center;
+}
+.art-detail-title {
+  text-transform: uppercase;
+  font-size: var(--font-size-xl);
+}
+.art-detail-figure-container {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px 5px rgba(240, 240, 240, 0.5);
+  background-color: var(--secondary-color);
+}
+.art-detail-img-artist {
+  width: auto;
+  height: 250px;
+}
+.art-detail-figcaption-artist {
+  font-size: var(--font-size-medium);
+}
+.art-detail-figure-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px 5px rgba(240, 240, 240, 0.5);
+  background-color: var(--secondary-color);
+}
+.article-artist-container {
+  display: grid;
+  padding: 0 1rem 0 0;
+  gap: 1rem;
+}
+.article-artist-container p {
+  font-size: var(--font-size-medium);
+  text-align: justify;
+}
+.alb-detail-section-container {
+  display: flex;
+  gap: 3rem;
+}
+.alb-detail-figure-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 200px;
+  gap: 1rem;
+  transition: transform .2s linear;
+}
+.alb-detail-figure-container > img {
+  width: auto;
+  height: 150px;
+}
+.alb-detail-figure-container:hover {
+  transform: scale(110%, 110%);
+}
