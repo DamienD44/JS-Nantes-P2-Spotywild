@@ -20,7 +20,7 @@ export interface AlbumI {
   albumName: string;
   albumImg: string;
   description: string;
-  songs: [];
+  songs: [{}];
 }
 
 export interface CarouselDataI {

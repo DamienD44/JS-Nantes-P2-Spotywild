@@ -33,10 +33,7 @@ function Albums() {
   return (
     <>
       <h1 className="albums-title">Les Albums</h1>
-<<<<<<< HEAD
 
-=======
->>>>>>> 966c24271bff77f60728a2165d2ecb71165986d1
       <section className="section-albums">
         {albums.map((album) => (
           <Link
