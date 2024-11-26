@@ -3,8 +3,10 @@ import "./Header.css";
 import Search from "../Search/Search";
 import MenuMob from "../menu-mobil/Menumob";
 import "../menu-mobil/menu.css";
+import { useSearch } from "../../contexts/SearchContexts";
 
 function Header() {
+  const { setSearchTerm } = useSearch();
   return (
     <>
       <header>
@@ -18,7 +20,7 @@ function Header() {
             />
           </section>
           <Link to="searchpage">
-            <Search />
+            <Search onSearchChange={setSearchTerm} />
           </Link>
           <ul>
             <li>
