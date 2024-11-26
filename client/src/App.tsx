@@ -7,6 +7,7 @@ import ButtonMenu from "./components/menuComponent/ButtonMenu/ButtonMenu";
 import Menu from "./components/menuComponent/Menu";
 
 import "./Globals.css";
+import MusicPlayer from "./components/AudioPlayer/MusicPlayer";
 
 function App() {
   const [isHidden, setIsHidden] = useState(false);
@@ -21,6 +22,7 @@ function App() {
       <main className="the-main">
         <section className="section-outlet">
           <Outlet />
+          <MusicPlayer />
         </section>
 
         <section className="menu-container">

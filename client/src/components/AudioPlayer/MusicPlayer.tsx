@@ -16,47 +16,47 @@ const MusicPlayer = () => {
     {
       id: 1,
       title: "Wanna Be Startin' Something",
-      src: "<assets /Music/1- Wanna Be Startin Somethin.mp3",
+      src: "/Music/01- Wanna Be Startin Somethin.mp3",
     },
     {
       id: 2,
-      title: "Baby Be Mine",
-      src: "/assets/Music/2- Griff Lamar Michael Jackson - Baby Be Mine.mp3",
+      title: "Baby Ber Mine",
+      src: "/Music/02- Griff Lamar Michael Jackson - Baby Be Mine.mp3",
     },
     {
       id: 3,
-      title: "The Girl Is Mine",
-      src: "/assets/Music/3- Michael Jackson - The Girl Is Mine ft. Paul McCartney.mp3",
+      title: "The girl Is Mine",
+      src: "/Music/03- Michael Jackson - The Girl Is Mine ft. Paul McCartney.mp3",
     },
     {
       id: 4,
-      title: "Baby Be Mine",
-      src: "assetsMusic\x04- Michael Jackson - Thriller - Thriller.mp3",
+      title: "Thriller",
+      src: "/Music/04- Michael Jackson - Thriller - Thriller.mp3",
     },
     {
       id: 5,
-      title: "Baby Be Mine",
-      src: "assetsMusic\x05- Michael Jackson - Beat It (Official Audio).mp3",
+      title: "Beat it",
+      src: "/Music/05- Michael Jackson - Beat It (Official Audio).mp3",
     },
     {
       id: 6,
-      title: "Baby Be Mine",
-      src: "assetsMusic\x06- Michael Jackson - Billie Jean (Lyrics).mp3",
+      title: "Billie Jean",
+      src: "/Music/06- Michael Jackson - Billie Jean (Lyrics).mp3",
     },
     {
       id: 7,
-      title: "Baby Be Mine",
-      src: "assetsMusic\x07- Michael Jackson - Human Nature (Lyrics Video) 🎤.mp3",
+      title: "Human Nature",
+      src: "/Music/07- Michael Jackson - Human Nature (Lyrics Video) 🎤.mp3",
     },
     {
       id: 8,
-      title: "Baby Be Mine",
-      src: "assetsMusic\x08- Michael Jackson - P.Y.T. (Pretty Young Thing) (Lyrics).mp3",
+      title: "P.Y.T",
+      src: "/Music/08- Michael Jackson - P.Y.T. (Pretty Young Thing) (Lyrics).mp3",
     },
     {
       id: 9,
-      title: "Baby Be Mine",
-      src: "assetsMusic\x09- Michael Jackson  - The lady in my life   (Lyrics).mp3",
+      title: "The Lady in my Life",
+      src: "/Music/09- Michael Jackson  - The lady in my life   (Lyrics).mp3",
     },
   ];
 
@@ -102,6 +102,11 @@ const MusicPlayer = () => {
           <button type="button" onClick={togglePlayPause}>
             {isPlaying ? "⏸️ Pause" : "▶️ Lecture"}
           </button>
+          <audio
+            ref={audioRef}
+            src={currentTrack ? currentTrack.src : undefined}
+            onEnded={() => setIsPlaying(false)}
+          />
         </div>
       )}
     </div>
