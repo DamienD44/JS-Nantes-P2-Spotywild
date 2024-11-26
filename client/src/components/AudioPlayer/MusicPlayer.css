@@ -1,4 +1,4 @@
-/* Conteneur principal */
+/*principal contain */
 .music-player {
   font-family: "Arial", sans-serif;
   background-color: #f9f9f9;
@@ -10,7 +10,7 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Titre principal */
+/* principal title */
 .music-player h2 {
   font-size: 1.8rem;
   text-align: center;
@@ -18,7 +18,7 @@
   color: #333;
 }
 
-/* Liste des musiques */
+/* List Music */
 .music-list {
   list-style-type: none;
   padding: 0;
@@ -47,7 +47,7 @@
   background-color: #0056b3;
 }
 
-/* Conteneur de lecture */
+/* Play current */
 .current-track {
   text-align: center;
   margin-top: 20px;
