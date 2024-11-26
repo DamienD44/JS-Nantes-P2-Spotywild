@@ -22,7 +22,6 @@ function App() {
       <main className="the-main">
         <section className="section-outlet">
           <Outlet />
-          <MusicPlayer />
         </section>
 
         <section className="menu-container">

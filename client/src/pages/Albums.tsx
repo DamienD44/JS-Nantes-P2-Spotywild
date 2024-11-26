@@ -2,9 +2,12 @@ import { useEffect, useState } from "react";
 import MusicSections from "../components/MusicSections/MusicSections";
 import type { AlbumI, MusicData } from "../types/musicSection";
 import "./Albums.css";
+import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Albums() {
   const [albums, setAlbums] = useState<AlbumI[]>([]);
+  const urlLocation = useLocation();
 
   useEffect(() => {
     fetch("http://localhost:4000/api/music-data")
@@ -24,28 +27,37 @@ function Albums() {
         }, []);
         setAlbums(allAlbums);
       })
-      .catch((err) => console.error("Erreur lors du fetch:", err));
+      .catch((err) => console.error("Erreur lors du fetch", err));
   }, []);
 
   return (
     <>
       <h1 className="albums-title">Les Albums</h1>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 966c24271bff77f60728a2165d2ecb71165986d1
       <section className="section-albums">
         {albums.map((album) => (
-          <MusicSections
+          <Link
             key={album.id}
-            Artists={[
-              {
-                id: album.id,
-                name: album.albumName,
-                country: "",
-                imgSrc: album.albumImg,
-                description: album.description,
-                albums: [],
-              },
-            ]}
-          />
+            to={`${urlLocation.pathname}details/${album.id}`}
+          >
+            <MusicSections
+              key={album.id}
+              artists={[
+                {
+                  id: album.id,
+                  name: album.albumName,
+                  country: "",
+                  imgSrc: album.albumImg,
+                  description: album.description,
+                  albums: [],
+                },
+              ]}
+              genreId={album.id}
+            />
+          </Link>
         ))}
       </section>
     </>

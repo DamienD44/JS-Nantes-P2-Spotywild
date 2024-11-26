@@ -6,7 +6,7 @@ export interface MusicData {
   artistes: ArtistI[];
 }
 
-interface ArtistI {
+export interface ArtistI {
   id: number;
   name: string;
   country: string;
