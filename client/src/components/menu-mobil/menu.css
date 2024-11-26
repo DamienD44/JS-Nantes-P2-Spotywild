@@ -10,7 +10,7 @@
 }
 
 .flex {
-  display: flex;
+  display: none;
   align-items: center;
 }
 header ul {
@@ -99,7 +99,7 @@ header ul.model li:last-child {
   border: none;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 770px) {
   header.flex nav {
     display: none;
     z-index: 50;
@@ -126,5 +126,10 @@ header ul.model li:last-child {
   header ul.model li:first-child {
     border: none;
     z-index: 50;
+  }
+
+  .flex {
+    display: flex;
+    align-items: center;
   }
 }
