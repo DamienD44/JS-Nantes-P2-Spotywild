@@ -43,7 +43,7 @@ function Carousel({ artists }: { artists: Partial<CarouselDataI>[] }) {
 
   return (
     <>
-      <div className="slider-containerArtist">
+      <div className="slider-container-artist">
         <Slider {...settings}>
           {artists.map((art) => (
             <div key={art.id} className="each-slide">

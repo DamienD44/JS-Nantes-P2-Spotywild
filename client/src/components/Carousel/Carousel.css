@@ -2,8 +2,6 @@
   display: grid !important;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 60px;
-  /* width: 250px;
-  height: 350px; */
   height: 350px;
   font-weight: bold;
   color: #101010;
@@ -53,16 +51,6 @@
   size: 1rem;
 }
 
-/* .each-slide > img {
-  width: 200px;
-  height: 200px;
-  object-fit: fill;
-  margin-bottom: 15%;
-  border-radius: 10px;
-  background-color: black;
-  border: 1px solid white;
-} */
-
 .slick-track {
   transform: none;
 }
@@ -72,7 +60,7 @@
   width: 250px;
 }
 
-.slider-containerArtist {
+.slider-container-artist {
   width: 90%;
 }
 
