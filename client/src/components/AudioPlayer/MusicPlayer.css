@@ -1,75 +1,91 @@
 /*principal contain */
 .music-player {
   font-family: "Arial", sans-serif;
-  background-color: #f9f9f9;
-  border: 2px solid #ddd;
-  border-radius: 10px;
-  padding: 20px;
-  max-width: 400px;
-  margin: 20px auto;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: 80px .8fr .2fr;
+  grid-template-rows: 80px;
+  align-items: center;
+  width: 100%;
+}
+.music-player img {
+  grid-column: 1 / 2;
+  width: 100%;
+  height: 100%;
+}
+.music-player button {
+  font-size: var(--font-size-medium);
+}
+.music-player button {
+  grid-column: 2 / 3;
+  font-size: var(--font-size-medium);
+}
+.music-title-span {
+  grid-column: 2 / 3;
+}
+.music-btn-span {
+  grid-column: 3 / 4;
 }
 
 /* principal title */
-.music-player h2 {
+/* .music-player h2 {
   font-size: 1.8rem;
   text-align: center;
   margin-bottom: 20px;
   color: #333;
-}
+} */
 
 /* List Music */
 .music-list {
-  list-style-type: none;
+  /* list-style-type: none;
   padding: 0;
-  margin: 0;
+  margin: 0; */
 }
 
 .music-list li {
-  margin: 10px 0;
+  /* margin: 10px 0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; */
 }
 
 .music-list button {
-  background-color: #007bff;
+  /* background-color: #007bff;
   color: white;
   border: none;
   padding: 10px 15px;
   border-radius: 5px;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease; */
 }
 
 .music-list button:hover {
-  background-color: #0056b3;
+  /* background-color: #0056b3; */
 }
 
 /* Play current */
-.current-track {
+/* .current-track {
   text-align: center;
   margin-top: 20px;
-}
+} */
 
-.current-track h3 {
+/* .current-track h3 {
   font-size: 1.5rem;
   color: #555;
   margin-bottom: 10px;
-}
+} */
 
 .current-track button {
-  background-color: #28a745;
+  /* background-color: #28a745;
   color: white;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease; */
 }
 
 .current-track button:hover {
-  background-color: #218838;
+  /* background-color: #218838; */
 }

@@ -76,6 +76,7 @@ export const router = createBrowserRouter([
             for (const artist of genre.artistes) {
               for (const album of artist.albums) {
                 const albumData = {
+                  albumImg: album.albumImg,
                   albumName: album.albumName,
                   songs: [...album.songs],
                 };
