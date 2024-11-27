@@ -7,7 +7,6 @@ import ButtonMenu from "./components/menuComponent/ButtonMenu/ButtonMenu";
 import Menu from "./components/menuComponent/Menu";
 
 import "./Globals.css";
-import MusicPlayer from "./components/AudioPlayer/MusicPlayer";
 
 function App() {
   const [isHidden, setIsHidden] = useState(false);

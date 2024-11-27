@@ -1,7 +1,6 @@
 import "./MusicSections.css";
 import { Link, useLocation } from "react-router-dom";
 import type { ArtistI } from "../../types/musicSection";
-import type { AlbumI } from "../../types/musicSection";
 
 function MusicSections({
   artists,

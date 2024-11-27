@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 interface TrackI {
   id: number;
@@ -9,7 +9,7 @@ interface TrackI {
 const MusicPlayer = () => {
   const [currentTrack, setCurrentTrack] = useState<TrackI | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
-  const audioRef = React.useRef<HTMLAudioElement | null>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const tracks = [
     {
@@ -101,6 +101,7 @@ const MusicPlayer = () => {
           <button type="button" onClick={togglePlayPause}>
             {isPlaying ? "⏸️ Pause" : "▶️ Lecture"}
           </button>
+          {/* biome-ignore lint/a11y/useMediaCaption: <explanation> Removed because biome require a track file for audio tag*/}
           <audio
             ref={audioRef}
             src={currentTrack ? currentTrack.src : undefined}
