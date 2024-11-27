@@ -7,8 +7,6 @@ export default function TitleDetails() {
   const albumName = data.albumName;
   const listSongs = data.songs;
 
-  console.table(listSongs);
-
   return (
     <>
       <h1>{albumName}</h1>
