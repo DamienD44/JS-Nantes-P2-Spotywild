@@ -58,7 +58,7 @@
   gap: 1rem;
   transition: transform .2s linear;
 }
-.alb-detail-figure-container > img {
+.alb-detail-figure-container > a img {
   width: auto;
   height: 150px;
 }

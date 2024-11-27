@@ -1,9 +1,10 @@
-import { useLoaderData, useLocation } from "react-router-dom";
+import { Link, useLoaderData, useLocation } from "react-router-dom";
 import type { ArtistI } from "../types/musicSection";
 import "../styles/ArtistsDetails.css";
 import DOMPurify from "dompurify";
 import HtmlReactParser from "html-react-parser";
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
+import Album from "../components/Album/Album";
 
 export default function ArtistDetails() {
   const [artDescription, setArtDescription] = useState<string>("");
@@ -59,12 +60,22 @@ export default function ArtistDetails() {
 
         {/* Show artist's albums */}
         <section className="alb-detail-section-container">
-          {albums.map((alb) => (
-            <figure key={alb.id} className="alb-detail-figure-container">
-              <img src={alb.albumImg} alt="" />
-              <figcaption key={alb.id}>{alb.albumName}</figcaption>
-            </figure>
-          ))}
+          {albums.map((alb) => {
+            return (
+              <Fragment key={alb.id}>
+                <Link
+                  key={alb.id}
+                  to={`/titledetails/${alb.albumName}/${alb.songs}`}
+                >
+                  <Album
+                    albumImg={alb.albumImg}
+                    albumName={alb.albumName}
+                    songs={alb.songs}
+                  />
+                </Link>
+              </Fragment>
+            );
+          })}
         </section>
       </section>
     </>
