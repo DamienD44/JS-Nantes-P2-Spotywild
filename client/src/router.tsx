@@ -10,6 +10,7 @@ import Home from "./pages/Home";
 import Politique from "./pages/Politique";
 import SearchPage from "./pages/SearchPage";
 
+import TitleDetails from "./pages/TitleDetails";
 import type { MusicData } from "./types/musicSection";
 import type { AlbumI, ArtistI } from "./types/musicSection.d";
 
@@ -59,6 +60,33 @@ export const router = createBrowserRouter([
           );
 
           return artist;
+        },
+      },
+      {
+        path: "titledetails/:idAlbName/:idSongs",
+        element: <TitleDetails />,
+        loader: async ({ params }) => {
+          const albumId = String(params.idAlbName);
+
+          const response = await fetch("http://localhost:4000/api/music-data");
+          const dataMusic = await response.json();
+          const listAlbum = [];
+
+          for (const genre of dataMusic) {
+            for (const artist of genre.artistes) {
+              for (const album of artist.albums) {
+                const albumData = {
+                  albumName: album.albumName,
+                  songs: [...album.songs],
+                };
+                listAlbum.push(albumData);
+              }
+            }
+          }
+
+          const songs = listAlbum.find((album) => album.albumName === albumId);
+
+          return songs;
         },
       },
       {
