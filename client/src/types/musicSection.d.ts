@@ -27,7 +27,7 @@ export interface SongI {
   id: number;
   title: string;
   src: string;
-  imgAlbum: string;
+  imgAlbum?: string;
 }
 
 export interface CarouselDataI {

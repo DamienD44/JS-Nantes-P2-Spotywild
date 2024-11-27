@@ -2,18 +2,12 @@ import { useRef, useState } from "react";
 import type { SongI } from "../../types/musicSection";
 import "./MusicPlayer.css";
 
-interface TrackI {
-  id: number;
-  title: string;
-  src: string;
-}
-
 const MusicPlayer = ({ title, src, id, imgAlbum }: SongI) => {
-  const [currentTrack, setCurrentTrack] = useState<TrackI | null>(null);
+  const [currentTrack, setCurrentTrack] = useState<SongI>();
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  const playTrack = (track: TrackI) => {
+  const playTrack = (track: SongI) => {
     if (audioRef.current) {
       audioRef.current.pause();
     }
