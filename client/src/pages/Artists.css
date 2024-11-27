@@ -1,4 +1,22 @@
-.artist-title {
+.artists-title {
+  margin-top: 1rem;
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  opacity: 0.85;
+  font-weight: 900;
+}
+.artists-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+.genre-name {
+  font-size: 1.5rem;
+  margin-top: 2%;
+  margin-left: 1.5%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.445);
+  width: 83.5%;
+  padding-bottom: 2%;
 }

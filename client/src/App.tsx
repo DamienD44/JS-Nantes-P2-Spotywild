@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
-
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import ButtonMenu from "./components/menuComponent/ButtonMenu/ButtonMenu";
 import Menu from "./components/menuComponent/Menu";
-
 import "./Globals.css";
+
+import { SearchProvider } from "./contexts/SearchContexts";
 
 function App() {
   const [isHidden, setIsHidden] = useState(false);
@@ -16,7 +16,7 @@ function App() {
   };
 
   return (
-    <>
+    <SearchProvider>
       <Header />
       <main className="the-main">
         <section className="section-outlet">
@@ -33,7 +33,7 @@ function App() {
         </section>
       </main>
       <Footer />
-    </>
+    </SearchProvider>
   );
 }
 

@@ -1,18 +1,16 @@
 import "./Search.css";
+import { useSearch } from "../../contexts/SearchContexts";
 
 const placeHoder = "Que voulez-vous écouter ?";
 
-interface SearchProps {
-  onSearchChange: (value: string) => void;
-}
-
-function Search({ onSearchChange }: SearchProps) {
+function Search() {
+  const { setSearchTerm } = useSearch();
   return (
     <input
       className="header-input"
       type="text"
       placeholder={placeHoder}
-      onChange={(e) => onSearchChange(e.target.value)}
+      onChange={(e) => setSearchTerm(e.target.value)}
     />
   );
 }
