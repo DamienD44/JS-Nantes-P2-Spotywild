@@ -683,15 +683,51 @@
             "albumImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFTcdJdQi4BKW-58engNIuZiypKaub4ol2gr59GxSiX7BAMBum9sY4tUGY5bij",
             "description": "Thriller est l'album qui a redéfini la musique pop et catapulté Michael Jackson au statut de superstar mondiale. Cet album iconique mélange pop, rock et funk, avec des hits mondiaux comme Billie Jean, Thriller, et Beat It. Thriller a été un phénomène culturel, brisant des records de ventes et influençant des générations d'artistes. C'est un des albums les plus vendus de tous les temps.",
             "songs": [
-              "Wanna Be Startin' Somethin'",
-              "Baby Be Mine",
-              "The Girl Is Mine (with Paul McCartney)",
-              "Thriller",
-              "Beat It",
-              "Billie Jean",
-              "Human Nature",
-              "P.Y.T. (Pretty Young Thing)",
-              "The Lady in My Life"
+              {
+                "id": 1,
+                "title": "Wanna Be Startin' Somethin'",
+                "src": "/Music/01- Wanna Be Startin Somethin.mp3"
+              },
+              {
+                "id": 2,
+                "title": "Baby Be Mine",
+                "src": "/Music/02- Griff Lamar Michael Jackson - Baby Be Mine.mp3"
+              },
+              {
+                "id": 3,
+                "title": "The Girl Is Mine (with Paul McCartney)",
+                "src": "/Music/03- Michael Jackson - The Girl Is Mine ft. Paul McCartney.mp3"
+              },
+              {
+                "id": 4,
+                "title": "Thriller",
+                "src": "/Music/04- Michael Jackson - Thriller - Thriller.mp3"
+              },
+              {
+                "id": 5,
+                "title": "Beat It",
+                "src": "/Music/05- Michael Jackson - Beat It (Official Audio).mp3"
+              },
+              {
+                "id": 6,
+                "title": "Billie Jean",
+                "src": "/Music/06- Michael Jackson - Billie Jean (Lyrics).mp3"
+              },
+              {
+                "id": 7,
+                "title": "Human Nature",
+                "src": "/Music/07- Michael Jackson - Human Nature (Lyrics Video) :micro:.mp3"
+              },
+              {
+                "id": 8,
+                "title": "P.Y.T. (Pretty Young Thing)",
+                "src": "/Music/08- Michael Jackson - P.Y.T. (Pretty Young Thing) (Lyrics).mp3"
+              },
+              {
+                "id": 9,
+                "title": "The Lady in My Life",
+                "src": "/Music/09- Michael Jackson  - The lady in my life   (Lyrics).mp3"
+              }
             ]
           },
           {
