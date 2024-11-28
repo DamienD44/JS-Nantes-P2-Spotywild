@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import "./Menu.css";
 import { useState } from "react";
 
@@ -34,19 +35,19 @@ export default function MenuMob() {
               </button>
             </li>
             <li>
-              <a className="link-menu" href={"/Home"}>
+              <NavLink className="link-menu" to="/">
                 Accueil
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a className="link-menu" href={"/"}>
+              <NavLink className="link-menu" to="albums">
                 Albums
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a className="link-menu" href={"/"}>
-                Titres
-              </a>
+              <NavLink className="link-menu" to="artists">
+                Artistes
+              </NavLink>
             </li>
           </ul>
         </div>
