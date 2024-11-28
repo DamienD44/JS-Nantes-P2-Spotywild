@@ -10,23 +10,35 @@ import { SearchProvider } from "./contexts/SearchContexts";
 
 function App() {
   const [isHidden, setIsHidden] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
 
   const menuState = () => {
-    setIsHidden((prevState) => !prevState);
+    if (isHidden) {
+      setIsHidden(false);
+    } else {
+      setIsClosing(true);
+      setTimeout(() => {
+        setIsClosing(false);
+        setIsHidden(true);
+      }, 1250);
+    }
   };
 
   return (
     <SearchProvider>
       <Header />
       <main className="the-main">
-        <section className="section-outlet">
+        <ButtonMenu isHidden={isHidden} menuState={menuState} />
+
+        <section
+          className={`section-outlet ${isHidden ? "outlet-full" : "outlet-with-menu"}`}
+        >
           <Outlet />
         </section>
 
         <section className="menu-container">
-          <ButtonMenu isHidden={isHidden} menuState={menuState} />
           <section
-            className={`column-menu ${isHidden ? "background-hidden" : "background-visible"}`}
+            className={`column-menu ${isClosing || isHidden ? "background-hidden" : "background-visible"}`}
           >
             <Menu isHidden={isHidden} />
           </section>
