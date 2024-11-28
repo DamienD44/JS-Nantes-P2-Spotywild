@@ -13,8 +13,26 @@ export default function ArtistDetails() {
   const albums = dataMusic.albums;
 
   const urlDescription = useLocation();
-  const prefixName = dataMusic.name.split(" ").join("_");
-  const splitUrlDescription = `${prefixName}_${urlDescription.pathname.split("/").slice(-2).join("_")}`;
+
+  // Récupérer le nom et le prénom de l'artiste et le joindre avec _
+  const getTheName = dataMusic.name.split(" ").join("_");
+
+  // Retirer les accents dans le nom des artistes
+  const accentsLetter = ["é", "è"];
+  const delAccent = ["e", "e"];
+  let prefix = "";
+
+  for (let i = 0; i < getTheName.length; i++) {
+    let currentLetter = getTheName[i];
+    for (let n = 0; n < accentsLetter.length; n++) {
+      if (accentsLetter[n] === currentLetter) {
+        currentLetter = delAccent[n];
+      }
+    }
+    prefix += currentLetter;
+  }
+
+  const splitUrlDescription = `${prefix}_${urlDescription.pathname.split("/").slice(-2).join("_")}`;
 
   useEffect(() => {
     const getData = async () => {
