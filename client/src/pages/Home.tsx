@@ -49,8 +49,12 @@ function Accueil() {
 
   return (
     <>
-      <Carousel artists={artistsCarouselData} />
-      <Carousel artists={albumsCarouselData} />
+      <section className="section-carousel">
+        <h2 className="carousel-title">Artists</h2>
+        <Carousel artists={artistsCarouselData} />
+        <h2 className="carousel-title">Albums</h2>
+        <Carousel artists={albumsCarouselData} />
+      </section>
     </>
   );
 }

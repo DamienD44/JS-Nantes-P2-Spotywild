@@ -2,7 +2,6 @@
   display: grid !important;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 60px;
-  width: 250px;
   height: 350px;
   font-weight: bold;
   color: #101010;
@@ -26,6 +25,8 @@
   object-fit: cover;
   overflow: hidden;
   background: #000;
+  background-color: black;
+  border: 1px solid white;
 }
 
 .each-slide.each-slide h2 {
@@ -36,7 +37,7 @@
 
 .slick-prev {
   position: absolute;
-  left: 0%;
+  left: -2.5%;
   visibility: visible;
   transform: 0;
   z-index: 1;
@@ -44,21 +45,29 @@
 }
 .slick-next {
   position: absolute;
-  right: 0%;
+  right: -2.5%;
   color: rgb(0, 0, 0);
   z-index: 1;
-}
-
-.each-slide > img {
-  width: 200px;
-  height: 200px;
-  object-fit: fill;
-  margin-bottom: 15%;
-  border-radius: 10px;
-  background-color: black;
-  border: 1px solid white;
+  size: 1rem;
 }
 
 .slick-track {
   transform: none;
+}
+
+.slick-track:first-of-type div {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  width: 250px;
+}
+
+.slider-container-artist {
+  width: 90%;
+}
+
+.slick-prev::before {
+  font-size: 2rem;
+}
+
+.slick-next::before {
+  font-size: 2rem;
 }
