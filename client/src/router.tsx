@@ -86,7 +86,6 @@ export const router = createBrowserRouter([
           }
 
           const songs = listAlbum.find((album) => album.albumName === albumId);
-          console.info(songs);
 
           return songs;
         },
