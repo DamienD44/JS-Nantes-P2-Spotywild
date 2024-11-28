@@ -1,9 +1,8 @@
 import CategoryCard from "../components/CategoryCard/CategoryCard";
 import "./SearchPage.css";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useSearch } from "../contexts/SearchContexts";
-
-import { useEffect, useState } from "react";
 import type { MusicData } from "../types/musicSection";
 
 function SearchPage() {
@@ -16,7 +15,7 @@ function SearchPage() {
       .then((data) => setDataMusic(data));
   }, []);
 
-  const filteredMusic = dataMusic.filter((genre) =>
+  const filteredGenres = dataMusic.filter((genre) =>
     genre.genre.toLowerCase().includes(searchTerm.toLowerCase()),
   );
 
@@ -24,23 +23,18 @@ function SearchPage() {
     <>
       <section className="category-container">
         <h1>Page de recherche</h1>
-
         <section className="category-wrapper">
-          {filteredMusic.length > 0 ? (
-            filteredMusic.map((genre) => (
-              <Link to={`/Genre/${genre.genre}`} key={genre.id}>
-                <CategoryCard
-                  genre={genre.genre}
-                  id={genre.id}
-                  titreImg={genre.titreImg}
-                  color={genre.color}
-                  artistes={genre.artistes}
-                />
-              </Link>
-            ))
-          ) : (
-            <p>Aucun résultat trouvé</p>
-          )}
+          {filteredGenres.map((genre) => (
+            <Link to={`/Genre/${genre.genre}`} key={genre.id}>
+              <CategoryCard
+                genre={genre.genre}
+                id={genre.id}
+                titreImg={genre.titreImg}
+                color={genre.color}
+                artistes={genre.artistes}
+              />
+            </Link>
+          ))}
         </section>
       </section>
     </>

@@ -1,7 +1,7 @@
 .music-section {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   text-align: center;
   gap: 2rem;
   padding: 1.5rem 1rem;
