@@ -5,6 +5,7 @@ import Header from "./components/Header/Header";
 import ButtonMenu from "./components/menuComponent/ButtonMenu/ButtonMenu";
 import Menu from "./components/menuComponent/Menu";
 import "./Globals.css";
+import { useEffect } from "react";
 
 import { SearchProvider } from "./contexts/SearchContexts";
 
@@ -24,6 +25,14 @@ function App() {
     }
   };
 
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 1024);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <SearchProvider>
       <Header />
@@ -36,7 +45,9 @@ function App() {
           <Outlet />
         </section>
 
-        <section className="menu-container">
+        <section
+          className={`menu-container ${!isHidden ? "visible" : { isMobile }}`}
+        >
           <section
             className={`column-menu ${isClosing || isHidden ? "background-hidden" : "background-visible"}`}
           >

@@ -40,8 +40,8 @@ export default function MenuMob() {
               </NavLink>
             </li>
             <li>
-              <NavLink className="link-menu" to="albums">
-                Albums
+              <NavLink className="link-menu" to="SearchPage">
+                Genres
               </NavLink>
             </li>
             <li>
