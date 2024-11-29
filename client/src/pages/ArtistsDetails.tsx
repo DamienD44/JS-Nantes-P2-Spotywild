@@ -4,7 +4,7 @@ import "../styles/ArtistsDetails.css";
 import DOMPurify from "dompurify";
 import HtmlReactParser from "html-react-parser";
 import { Fragment, useEffect, useState } from "react";
-import Album from "../components/Album/Album";
+import Album from "../components/Album/Album.tsx";
 
 export default function ArtistDetails() {
   const [artDescription, setArtDescription] = useState<string>("");

@@ -10,14 +10,11 @@
   height: var(--header-container-height);
 }
 .header-container ul {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(50px, 1fr));
+  justify-items: center;
   align-items: center;
-  width: fit-content;
-}
-.header-container ul > li {
-  padding: .5rem 1.5rem;
+  width: 30%;
 }
 .header-container .active {
   font-weight: bold;
@@ -40,8 +37,9 @@
     grid-template-rows: 1fr;
   }
   .header-container section {
-    grid-column: 1 / 2;
-    place-self: center;
+    display: flex;
+    justify-content: center;
+    width: 70%;
   }
   .nav-section {
     display: flex;

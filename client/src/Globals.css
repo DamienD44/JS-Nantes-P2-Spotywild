@@ -22,7 +22,6 @@
   font-size: var(--font-size-normal);
 }
 body {
-  /* width: 100vw; */
   color: var(--text-light-color);
   background-color: var(--primary-color);
 }
@@ -62,6 +61,7 @@ footer {
 }
 
 .the-main {
+  width: 100%;
   display: grid;
   grid-template-columns: 70% 30%;
   grid-template-rows: 1fr;
