@@ -34,7 +34,6 @@ function Albums() {
     <>
       <h1 className="albums-title">Les Albums</h1>
 
-      {/* <section className="section-albums"> */}
       {albums.map((album) => (
         <Link key={album.id} to={`${urlLocation.pathname}details/${album.id}`}>
           <MusicSections
@@ -53,7 +52,6 @@ function Albums() {
           />
         </Link>
       ))}
-      {/* </section> */}
     </>
   );
 }
