@@ -100,6 +100,23 @@ footer {
   animation: stretchOutlet 4s forwards;
 }
 
+.section-outlet.outlet-with-menu {
+  grid-column: 1 / 2;
+  width: 100%;
+  animation: shrinkageOutlet 4s forwards;
+}
+
+.column-menu.background-hidden {
+  animation: slideUp 2s forwards;
+}
+
+.column-menu.background-visible {
+  animation: slideDown 2s 1s forwards;
+  visibility: hidden;
+  height: 0;
+  opacity: 0;
+}
+
 @keyframes stretchOutlet {
   0% {
     width: 70%;
@@ -109,19 +126,16 @@ footer {
   }
 }
 
-.section-outlet.outlet-with-menu {
-  grid-column: 1 / 2;
-}
+@keyframes shrinkageOutlet {
+  0% {
+    grid-column: 1 / 2;
+    width: 115%;
+  }
 
-.column-menu.background-hidden {
-  animation: slideUp 2s forwards;
-}
-
-.column-menu.background-visible {
-  animation: slideDown 2s forwards;
-  visibility: hidden;
-  height: 0;
-  opacity: 0;
+  100% {
+    grid-column: 1 / 2;
+    width: 100%;
+  }
 }
 
 @keyframes slideDown {
