@@ -40,14 +40,14 @@
   left: -2.5%;
   visibility: visible;
   transform: 0;
-  z-index: 1;
+  z-index: 0;
   color: rgb(0, 0, 0);
 }
 .slick-next {
   position: absolute;
   right: -2.5%;
   color: rgb(0, 0, 0);
-  z-index: 1;
+  z-index: 0;
   size: 1rem;
 }
 

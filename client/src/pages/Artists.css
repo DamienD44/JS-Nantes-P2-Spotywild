@@ -1,9 +1,7 @@
 .artists-title {
-  margin-top: 1rem;
   text-align: center;
   font-size: 2.5rem;
-  opacity: 0.85;
-  font-weight: 900;
+  font-weight: 700;
 }
 .artists-section {
   display: flex;

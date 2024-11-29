@@ -22,7 +22,7 @@ function SearchPage() {
   return (
     <>
       <section className="category-container">
-        <h1>Page de recherche</h1>
+        <h1>Différents Genres</h1>
         <section className="category-wrapper">
           {filteredGenres.map((genre) => (
             <Link to={`/Genre/${genre.genre}`} key={genre.id}>

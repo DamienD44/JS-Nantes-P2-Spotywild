@@ -1,5 +1,5 @@
 .container {
-  width: 80%;
+  /* width: 80%; */
   margin-left: auto;
   margin-right: auto;
   background: none;
@@ -13,23 +13,23 @@
   display: none;
   align-items: center;
 }
-header ul {
+.container ul {
   gap: 30px;
 }
 
-header ul li .link-menu {
+.container ul li .link-menu {
   color: rgb(244 244 245);
   opacity: 0.9;
   font-size: 0.88;
   font-weight: 500;
 }
-header ul li .link-menu:hover {
+.container ul li .link-menu:hover {
   color: rgb(93, 188, 252);
   opacity: 1;
   font-size: 0.9;
 }
 
-header button {
+.container button {
   position: absolute;
   top: 0;
   left: 0;
@@ -39,16 +39,12 @@ header button {
 .dispart {
   display: none;
 }
-header {
-  justify-content: space-between;
-  padding: 0 2rem;
-}
 
 .menus {
   display: none;
 }
 /* model*/
-header .fixed {
+.container .fixed {
   position: fixed;
   inset: 0;
   background-color: rgba(88, 88, 98, 0.693);
@@ -66,12 +62,12 @@ header ul.model {
   background: #19181b;
   display: none;
 }
-header ul.model li {
+.container ul.model li {
   border-bottom: solid 1px rgba(49, 49, 49, 0.844);
   padding-bottom: 2rem;
 }
 
-header ul.model li:last-child {
+.container ul.model li:last-child {
   border: none;
 }
 
@@ -102,7 +98,7 @@ header ul.model li:last-child {
 @media (max-width: 770px) {
   header.flex nav {
     display: none;
-    z-index: 50;
+    z-index: 10;
   }
   header ul.model {
     width: 85%;
@@ -115,17 +111,17 @@ header ul.model li:last-child {
     background: #19181b;
     display: flex;
     flex-direction: column;
-    z-index: 50;
+    z-index: 10;
   }
 
   .menus {
     display: block;
-    z-index: 2;
+    z-index: 10;
   }
 
   header ul.model li:first-child {
     border: none;
-    z-index: 50;
+    z-index: 10;
   }
 
   .flex {
