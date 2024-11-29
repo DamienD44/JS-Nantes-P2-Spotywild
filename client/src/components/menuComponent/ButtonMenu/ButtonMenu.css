@@ -10,7 +10,7 @@
   color: white;
   cursor: pointer;
   margin-top: 1rem;
-  z-index: 2;
+  z-index: 3;
   position: relative;
 }
 
@@ -83,5 +83,11 @@
     padding: 10px 20px;
     box-shadow: none;
     font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 770px) {
+  .button-title {
+    z-index: 1;
   }
 }

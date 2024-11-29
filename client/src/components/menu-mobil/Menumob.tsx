@@ -5,7 +5,7 @@ export default function MenuMob() {
   const [Showmodel, setShowmodel] = useState(false);
 
   return (
-    <header className="container flex">
+    <section className="container flex">
       <button
         className="menus"
         type="button"
@@ -15,7 +15,7 @@ export default function MenuMob() {
       >
         <img
           className="burger-menu"
-          src="../images/Logo-footer-menu/Logo_voir_menu-compacter.png"
+          src="Icones/Menu-burger-compresser.png"
           alt="Logo"
         />
       </button>
@@ -51,6 +51,6 @@ export default function MenuMob() {
           </ul>
         </div>
       )}
-    </header>
+    </section>
   );
 }
